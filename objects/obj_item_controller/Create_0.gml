@@ -1,3 +1,5 @@
+///@desc draw inventory
+
 depth = -99999999999
 
 // item constructor
@@ -49,13 +51,11 @@ global.item_inv =
 // create the inventory
 inv = array_create(0) //inventory array
 
-	/// !!!! TEMPORARY !!!!
-	// place items in inventory array
-	//array_push(inv, global.item_inv.Apprentice_hat)
-	//array_push(inv, global.item_inv.Apprentice_cape)
-	
+selected_item = -1 // item selected for use with mouse
 	
 
 // draw + mouse position
 sep = 64
 screen_bord = 64
+
+
