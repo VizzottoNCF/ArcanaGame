@@ -57,7 +57,7 @@ function gf_game_text(_text_id)
 			
 		#endregion
 		case "save":
-			gf_text("ABC abcaaaaaaaa aaaaa aaaaaaaa")
+			gf_text("O fluxo de mana prevalece. Salvar o seu progresso?")
 			break;
 		
 	}

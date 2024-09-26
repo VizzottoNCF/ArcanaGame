@@ -43,6 +43,8 @@ function gf_player_spr_update()
 function gf_player_state_free()
 {
 	// sets sprites to player coordinates
+	PlayerSillhouette_sprite_id.x = x
+	PlayerSillhouette_sprite_id.y = y
 	PlayerBody_sprite_id.x = x
 	PlayerBody_sprite_id.y = y
 	PlayerCape_sprite_id.x = x
@@ -82,6 +84,7 @@ function gf_player_state_free()
 
 	if(sign(move_x) < 0)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_walk_left
 		PlayerBody_sprite_id.sprite_index = spr_player_walk_left
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_walk_left
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_walk_left
@@ -91,6 +94,7 @@ function gf_player_state_free()
 	
 	if(sign(move_x)> 0)     
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_walk_right
 		PlayerBody_sprite_id.sprite_index = spr_player_walk_right
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_walk_right
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_walk_right
@@ -100,6 +104,7 @@ function gf_player_state_free()
 	
 	if (sign(move_y ) <0)		
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_walk_up
 		PlayerBody_sprite_id.sprite_index = spr_player_walk_up
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_walk_up
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_walk_up
@@ -109,6 +114,7 @@ function gf_player_state_free()
 	
 	 if(sign(move_y) >0)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_walk_down
 		PlayerBody_sprite_id.sprite_index = spr_player_walk_down
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_walk_down
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_walk_down
@@ -118,24 +124,28 @@ function gf_player_state_free()
 	
 	if (!_moving && facing_side == 0)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_idle_left
 		PlayerBody_sprite_id.sprite_index = spr_player_idle_left
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_idle_left
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_idle_left
 	}
 	if (!_moving && facing_side == 2)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_idle_up
 		PlayerBody_sprite_id.sprite_index = spr_player_body_idle_up
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_idle_up
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_idle_up
 	}
 	if (!_moving && facing_side == 3)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_idle_down
 		PlayerBody_sprite_id.sprite_index = spr_player_body_idle_down
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_idle_down
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_idle_down
 	}
 	if (!_moving && facing_side == 1)
 	{
+		PlayerSillhouette_sprite_id.sprite_index = spr_sillhouette_idle_right
 		PlayerBody_sprite_id.sprite_index = spr_player_idle_right
 		PlayerCape_sprite_id.sprite_index = global.spr_PlayerCape_idle_right
 		PlayerHat_sprite_id.sprite_index = global.spr_PlayerHat_idle_right

@@ -10,6 +10,7 @@ player_state = GE_PLAYER_STATE.FREE
 
 
 // Creates Player Sprite
+PlayerSillhouette_sprite_id = instance_create_layer(x, y, layer, obj_PlayerSillhouette_spr)
 PlayerBody_sprite_id = instance_create_layer(x, y, layer, obj_PlayerBody_spr)
 PlayerCape_sprite_id = instance_create_layer(x, y, layer, obj_PlayerCape_spr)
 PlayerHat_sprite_id = instance_create_layer(x, y, layer, obj_PlayerHat_spr)

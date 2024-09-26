@@ -107,7 +107,7 @@ if (text_pause_timer <= 0)
 			else
 			{
 				snd_count = 0
-				audio_sound_pitch(snd[page], random_range(0.9, 1.4))
+				audio_sound_pitch(snd[page], random_range(0.5, 1))
 				audio_play_sound(snd[page], 1, false)
 			}
 		}
@@ -118,10 +118,16 @@ else
 	text_pause_timer--
 }
 	
-	
+// counter for fast page flipping (starts at 0)
+time_since_page_start++
+
 //-------------------flip through pages-------------------//
-if (global.key_action_pressed)
+if (global.key_action_pressed && time_since_page_start > 1)
 {
+	
+	time_since_page_start = 0 // restarts counter
+	
+	
 	// check if text was already drawn
 	if (draw_char == text_length[page])
 	{
@@ -230,6 +236,7 @@ for (var c = 0; c < draw_char; c++)
 		float_dir[c,page] += -14
 		_float_y = dsin(float_dir[c,page])*3
 	}
+	
 	//the text
 	draw_text_transformed_color(char_x[c,page] + _shake_x, char_y[c, page] + _float_y + _shake_y, char[c, page], _x_scale, _angle, _y_scale, col_1[c, page],  col_2[c, page], col_3[c, page], col_4[c, page], 1)
 }

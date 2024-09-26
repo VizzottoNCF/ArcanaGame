@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_cape_blue_idle_down",
   "bboxMode":0,
-  "bbox_bottom":55,
+  "bbox_bottom":63,
   "bbox_left":20,
   "bbox_right":43,
   "bbox_top":24,

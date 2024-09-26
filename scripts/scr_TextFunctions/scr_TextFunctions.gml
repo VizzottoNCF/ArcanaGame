@@ -4,7 +4,7 @@ function scr_set_default_texts()
 	line_break_pause[0, page_number] = 999
 	line_break_num[page_number] = 0
 	line_break_offset[page_number] = 0
-	snd[page_number] = snd_typeText
+	snd[page_number] = snd_blank //snd_typeText
 	
 	// varaibles for every letter/character
 	for (var c = 0; c < 500; c++)
@@ -90,7 +90,7 @@ function gf_text(_text)
 		switch (argument[1])
 		{
 			default:
-				snd[page_number] = snd_typeText
+				snd[page_number] = snd_blank //snd_typeText
 				break;
 				
 			//case "Alarme":

@@ -40,7 +40,7 @@ option_text_length = string_length(option[0])
 if (setup != false) {setup = false}
 
 //Sound
-snd_delay = 4
+snd_delay = 5
 snd_count = snd_delay
 
 // VFX
@@ -48,14 +48,21 @@ scr_set_default_texts()
 last_free_space = 0
 text_pause_timer = 0
 text_pause_time = 16
+
+
+// Debug
+
+time_since_page_start = 0 // be able to jump to next page (fix bug for insta page switch)
+
+
 if (font_exists(global.font_medium))
 {
-	show_debug_message("Font exists")
+	//show_debug_message("Font exists")
 	draw_set_font(global.font_medium)
 }
 else
 {
-	show_debug_message("Font does not exist")
+	//show_debug_message("Font does not exist")
 	draw_set_font(fn_Lilita)
 }
 

@@ -9,8 +9,8 @@
   "name":"obj_Sprite_Controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player Objects",
-    "path":"folders/Player/Player Objects.yy",
+    "name":"Controller Objects n Parents",
+    "path":"folders/Controller Objects n Parents.yy",
   },
   "parentObjectId":null,
   "persistent":true,

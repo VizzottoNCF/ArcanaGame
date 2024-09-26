@@ -7,9 +7,12 @@ depth=-bbox_bottom
 
 
 // draws sprites for body, cape and hat 
+PlayerSillhouette_sprite_id.depth = depth+1
 PlayerBody_sprite_id.depth = depth
 PlayerCape_sprite_id.depth = depth-1
 PlayerHat_sprite_id.depth = depth-2
+
+
 
 
  

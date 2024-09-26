@@ -12,7 +12,10 @@
     "name":"Save Sytem",
     "path":"folders/Save Sytem.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_Light_Source_parent",
+    "path":"objects/obj_Light_Source_parent/obj_Light_Source_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sTXTBOX",
-    "path":"sprites/sTXTBOX/sTXTBOX.yy",
+    "name":"spr_save_point",
+    "path":"sprites/spr_save_point/spr_save_point.yy",
   },
   "spriteMaskId":null,
   "visible":true,
