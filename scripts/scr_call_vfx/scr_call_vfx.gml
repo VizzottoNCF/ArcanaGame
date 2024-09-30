@@ -1,5 +1,8 @@
 function gf_basic_shadow()
 {
+	curr_pos_X = x
+	curr_pos_Y = y
+	
 	// draws angular shadow
 	if (instance_exists(obj_Light_Source_parent) && distance_to_object(instance_nearest(x, y, obj_Light_Source_parent)) <= obj_Light_Source_parent.light_reach)
 	{
@@ -17,9 +20,20 @@ function gf_basic_shadow()
 		target_offset_y = 2
 	}
 	
-	// Interpolate between current and target offsets
-    current_offset_x = lerp(current_offset_x, target_offset_x, 0.07)
-    current_offset_y = lerp(current_offset_y, target_offset_y, 0.07)
+	
+	if curr_pos_X == prev_pos_X && curr_pos_Y == prev_pos_Y
+	{
+		// in the same position, maintain same current offset
+	}
+	else
+	{
+		// Interpolate between current and target offsets since in different positions
+	    current_offset_x = lerp(current_offset_x, target_offset_x, 1)
+	    current_offset_y = lerp(current_offset_y, target_offset_y, 1)
+		
+		prev_pos_Y = y
+		prev_pos_X = x
+	}
 	
 	
 	// top-left corner
