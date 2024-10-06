@@ -1,5 +1,7 @@
 /// @description 
 
+image_angle++
+
 var _s = id.text_id
 
 if (distance_to_object(obj_Player_Hitbox)<= 64)

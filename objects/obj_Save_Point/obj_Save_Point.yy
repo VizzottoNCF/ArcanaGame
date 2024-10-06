@@ -12,10 +12,7 @@
     "name":"Save Sytem",
     "path":"folders/Save Sytem.yy",
   },
-  "parentObjectId":{
-    "name":"obj_Light_Source_parent",
-    "path":"objects/obj_Light_Source_parent/obj_Light_Source_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

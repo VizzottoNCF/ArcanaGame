@@ -35,6 +35,5 @@ for (var i = 0; i < op_length; i++)
 	draw_text_color(x+op_border, y+op_border + op_space*i, option[menu_level, i], _c, _c, _c, _c, 1)
 	
 	// also grabs coords for mouse selecting options
-	mouse_select_x[i] = x+op_border
-	mouse_select_y[i] = y+op_border+op_space*i
+
 }

@@ -66,12 +66,19 @@ function save_game(_fileNum = 0)
 	global.statData.save_rm = room_get_name(room)
 	global.statData.save_enter = oPlayer_Origin.targetEnter
 	
+	// items
 	global.statData.coins = global.coins
 	global.statData.item_inv = global.item_inv
 	
+	// equipped items
 	global.statData.cape_equipped = global.cape_equipped
 	global.statData.hat_equipped = global.hat_equipped
 	global.statData.staff_equipped = global.staff_equipped
+	
+	// status
+	global.statData.health_max = global.health_max
+	global.statData.mana_max = global.mana_max
+	
 	
 	array_push(_saveArray, global.statData)
 	
@@ -111,12 +118,19 @@ function load_game(_fileNum = 0)
 	global.statData = array_get(_loadArray, 0)
 	global.levelData = array_get(_loadArray, 1)
 	
+	// items
 	global.coins = global.statData.coins
 	global.item_inv = global.statData.item_inv
 	
+	// equipped items
 	global.cape_equipped = global.statData.cape_equipped
 	global.hat_equipped = global.statData.hat_equipped
 	global.staff_equipped = global.statData.staff_equipped
+	
+	// status
+	global.health_max = global.statData.health_max
+	global.mana_max = global.statData.mana_max
+	
 	
 	// use new data to go back where we left in game
 		// go to correct room

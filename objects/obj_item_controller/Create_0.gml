@@ -2,13 +2,20 @@
 
 depth = -99999999999
 
+
+inventory_open = false
+
+
+
+
 // item constructor
-function create_item(_name, _icon) constructor
+function create_item(_name, _icon, _desc, _effect) constructor
 {
 	
 	name = _name
 	icon = _icon
-	
+	desc = _desc
+	effect = _effect
 }
 
 
@@ -20,7 +27,13 @@ global.item_inv =
 
 	Apprentice_hat : new create_item(
 		"Apprentice's Hat",
-		spr_hat_blue_idle_down // sub for actual icon later
+		spr_hat_blue_idle_down, // sub for actual icon later,
+		"An important gift",
+		function()
+		{
+			global.hat_equipped = "Blue"
+			update_player_stat_bonus()
+		}
 	),
 
 	
@@ -30,7 +43,13 @@ global.item_inv =
 	
 	Apprentice_cape : new create_item(
 		"Apprentice's Cape",
-		spr_cape_blue_idle_down // sub for actual icon later
+		spr_cape_blue_idle_down, // sub for actual icon later
+		"An important gift",
+		function()
+		{
+			global.cape_equipped = "Blue"
+			update_player_stat_bonus()
+		}
 	),
 	
 	#endregion
@@ -39,8 +58,14 @@ global.item_inv =
 	
 	Apprentice_staff : new create_item(
 		"Apprentice's Staff",
-		spr_cape_blue_idle_down // sub for actual icon later
-	),
+		spr_cape_blue_idle_down, // sub for actual icon later
+		"An important gift",
+		function()
+		{
+			global.staff_equipped = "Starter"
+			update_player_stat_bonus()
+		}
+		),
 	
 	#endregion
 	

@@ -2,9 +2,11 @@
 global.coins = 0
 global.item_inv = array_create(0)
 
-global.cape_equipped = 0
-global.hat_equipped = 0
+global.cape_equipped = "Blue"
+global.hat_equipped = "Blue"
 global.staff_equipped = 0
+global.health_max = 3
+global.mana_max = 10
 
 skipRoomSave = false
 
@@ -20,10 +22,12 @@ global.statData =
 	coins : 0,
 	item_inv : 0,
 	
-	cape_equipped : 0,
-	hat_equipped : 0,
+	cape_equipped : "Blue",
+	hat_equipped : "Blue",
 	staff_equipped : 0,
 	
+	health_max : 3,
+	mana_max : 10,
 }
 
 // structs for level data

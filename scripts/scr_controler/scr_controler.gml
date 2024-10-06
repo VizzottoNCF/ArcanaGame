@@ -52,13 +52,13 @@ function gf_dev_functions(_type)
 	{		
 		return global.key_action_pressed
 	}
-	function gf_get_key_jump_state()
+	function gf_get_key_dash_state()
 	{
-		return global.key_jump
+		return global.key_dash
 	}
-	function gf_get_key_jump_pressed_state()
+	function gf_get_key_dash_pressed_state()
 	{
-		return global.key_jump_pressed
+		return global.key_dash_pressed
 	}
 	function gf_get_key_item_state()
 	{
@@ -116,8 +116,8 @@ function gf_global_controller()
 	global.key_right =	keyboard_check(vk_right)	|| keyboard_check(ord("D")) || (gamepad_axis_value(global.GP_NUM ,gp_axislh)>0.1)	|| global.key_touch_right_detected
 	
 
-	global.key_action = keyboard_check(ord("X")) || keyboard_check(ord("B"))   || gamepad_button_check(global.GP_NUM, gp_face4) || global.key_touch_action_detected // TOP BUTTON
-	global.key_jump =   keyboard_check(ord("Z")) || keyboard_check(vk_numpad0) || gamepad_button_check(global.GP_NUM, gp_face1) || global.key_touch_jump_detected // BOTTOM BUTTON
+	global.key_action = keyboard_check(ord("X")) || keyboard_check(ord("B"))   || gamepad_button_check(global.GP_NUM, gp_face4) || global.key_touch_action_detected || mouse_check_button(mb_left) // TOP BUTTON
+	global.key_dash =   keyboard_check(ord("Z")) || keyboard_check(vk_numpad0) || gamepad_button_check(global.GP_NUM, gp_face1) || global.key_touch_dash_detected // BOTTOM BUTTON
 	global.key_item =   keyboard_check(ord("C")) || keyboard_check(ord("N"))   || gamepad_button_check(global.GP_NUM, gp_face3) // LEFT BUTTON 
 	//gp_paddlel
 	
@@ -125,23 +125,23 @@ function gf_global_controller()
 	
 		#region key pressed rework fiddled with key pressed to be universal for controler
 			////////////////////////
-			#region key jump
+			#region key dash
 	
-			if ( global.key_jump == 1 && global.key_jump_last_detected == 1) 
+			if ( global.key_dash == 1 && global.key_dash_last_detected == 1) 
 			{
-				global.key_jump_pressed=0
+				global.key_dash_pressed=0
 		
 			}	
-			if( global.key_jump == 1 && global.key_jump_last_detected == 0)
+			if( global.key_dash == 1 && global.key_dash_last_detected == 0)
 			{
-				global.key_jump_pressed = 1
-				global.key_jump_last_detected = 1
+				global.key_dash_pressed = 1
+				global.key_dash_last_detected = 1
 		
 			} 
-			if (global.key_jump == 0) 
+			if (global.key_dash == 0) 
 			{
-				global.key_jump_pressed = 0
-				global.key_jump_last_detected = 0
+				global.key_dash_pressed = 0
+				global.key_dash_last_detected = 0
 			}
 			#endregion
 			////////////////////////
@@ -279,7 +279,7 @@ function gf_global_controller_var_declaration()
 		global.key_right = 0
 	
 		global.key_action = 0
-		global.key_jump = 0
+		global.key_dash = 0
 		global.key_item = 0
 	
 		global.key_pause_single_pressed = 0  //single pressed is meant cuz it dont have the normal key (continual )state
@@ -289,9 +289,9 @@ function gf_global_controller_var_declaration()
 		global.key_action_pressed = 0
 		global.key_action_last_detected = 0
 		
-		//jump pressed
-		global.key_jump_pressed = 0
-		global.key_jump_last_detected = 0
+		//dash pressed
+		global.key_dash_pressed = 0
+		global.key_dash_last_detected = 0
 		
 		//up pressed
 		global.key_up_pressed = 0
@@ -328,7 +328,7 @@ function gf_controller_touch_set_reset_keys()
 	global.key_touch_right_detected = 0
 		
 	global.key_touch_action_detected = 0
-	global.key_touch_jump_detected = 0
+	global.key_touch_dash_detected = 0
 }
 
 
@@ -341,5 +341,5 @@ function gf_key_touch_detected(slv_SGE_TOUCH_DETECTED)
 	else if(slv_SGE_TOUCH_DETECTED==SGE_TOUCH_DETECTED.RIGHT)	global.key_touch_right_detected = 1
 		
 	else if(slv_SGE_TOUCH_DETECTED==SGE_TOUCH_DETECTED.ACTION)		global.key_touch_action_detected = 1
-	else if(slv_SGE_TOUCH_DETECTED==SGE_TOUCH_DETECTED.JUMP)		global.key_touch_jump_detected = 1
+	else if(slv_SGE_TOUCH_DETECTED==SGE_TOUCH_DETECTED.dash)		global.key_touch_dash_detected = 1
 }

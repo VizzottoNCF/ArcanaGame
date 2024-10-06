@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"OST_1_Name",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":3,
+  "conversionMode":0,
+  "duration":142.08,
+  "name":"OST_1_Name",
+  "parent":{
+    "name":"OSTs",
+    "path":"folders/Sounds/OSTs.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"OST_1_Name.wav",
+  "type":1,
+  "volume":0.44,
+}

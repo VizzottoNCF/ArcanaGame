@@ -12,8 +12,8 @@
   "duration":2.264558,
   "name":"snd_blank",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"SFXs",
+    "path":"folders/Sounds/SFXs.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
