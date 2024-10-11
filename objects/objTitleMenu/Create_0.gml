@@ -31,14 +31,5 @@ op_length = 0
 menu_level = 0
 
 
-//if (font_exists(global.font_medium))
-//{
-//	//show_debug_message("Font exists")
-//	draw_set_font(global.font_medium)
-//}
-//else
-//{
-//	//show_debug_message("Font does not exist")
-//	draw_set_font(fn_Lilita)
-//}
+if (font_exists(global.font_medium)) {draw_set_font(global.font_medium)} else{draw_set_font(fn_Lilita)}
 

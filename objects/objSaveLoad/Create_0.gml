@@ -38,9 +38,12 @@ global.levelData =
 	level_3 : 0,
 }
 
+// game config vars
+global.MasterVolume = 1
+global.MusicVolume = 1
+
 global.configData = 
 {
-	language : 0,
-	window_size : 0,
-	fullscreen : 0,
+	master_volume : 1,
+	music_volume : 1,
 }
