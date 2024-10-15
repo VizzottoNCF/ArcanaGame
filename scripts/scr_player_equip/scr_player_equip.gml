@@ -1,6 +1,6 @@
 #region STATUS
 
-function spdate_player_status_bonus()
+function update_player_status_bonus()
 {
 	
 	player_calc_status()

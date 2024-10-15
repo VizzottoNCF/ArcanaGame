@@ -1,9 +1,9 @@
 // info for curr song we are playing or trying to play
 songInstance = noone // song currently playing
 songAsset = noone // which song we should instanciate
-targetSongAsset = OST_2_Name // which song we want to play
-startFadeInTime = 0 // frames to fade in
+targetSongAsset = noone // which song we want to play
 endFadeOutTime = 0 // frames to fade out
+startFadeInTime = 0 // frames to fade in
 fadeInInstVol = 1 //volume of songInstance
 
 

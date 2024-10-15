@@ -32,7 +32,7 @@ global.item_inv =
 		function()
 		{
 			global.hat_equipped = "Blue"
-			update_player_stat_bonus()
+			update_player_status_bonus()
 		}
 	),
 
@@ -48,7 +48,7 @@ global.item_inv =
 		function()
 		{
 			global.cape_equipped = "Blue"
-			update_player_stat_bonus()
+			update_player_status_bonus()
 		}
 	),
 	
@@ -63,7 +63,7 @@ global.item_inv =
 		function()
 		{
 			global.staff_equipped = "Starter"
-			update_player_stat_bonus()
+			update_player_status_bonus()
 		}
 		),
 	
