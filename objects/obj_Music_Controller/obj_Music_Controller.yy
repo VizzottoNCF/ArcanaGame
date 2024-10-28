@@ -31,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_music",
+    "path":"sprites/spr_music/spr_music.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

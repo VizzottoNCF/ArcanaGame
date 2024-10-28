@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":3,
   "conversionMode":0,
-  "duration":304.2,
+  "duration":2.264558,
   "name":"OST_2_Name",
   "parent":{
     "name":"OSTs",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"OST_2_Name.mp3",
+  "soundFile":"OST_2_Name.wav",
   "type":1,
-  "volume":0.04,
+  "volume":1.0,
 }

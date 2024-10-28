@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_equip",
+    "path":"sprites/spr_equip/spr_equip.yy",
+  },
   "spriteMaskId":null,
   "visible":false,
 }
